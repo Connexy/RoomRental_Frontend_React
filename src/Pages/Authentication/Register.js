@@ -12,20 +12,16 @@ const Register = () => {
                                 <i class='bx bxs-user'></i>
                                 <label for="#">Username</label>
                                 <input type="text" placeholder="Enter Your Username*" />
-
-
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-envelope'></i>
                                 <label for="#">Email</label>
                                 <input type="email" placeholder="Enter Your Email*" />
-
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
                                 <label for="#">Password</label>
                                 <input type="password" placeholder="Enter Your Password*" />
-
                             </div>
                             <div class="forgot-section">
                                 <span><input type="checkbox" name="" id="checked" />Remember Me</span>
