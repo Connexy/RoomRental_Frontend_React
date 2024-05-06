@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
     return (
         <div className="body">
@@ -28,9 +30,8 @@ const Login = () => {
                         <div class="social-media">
                             <i class='bx bxl-facebook'></i>
                             <i class='bx bxl-google'></i>
-                            <i class='bx bxl-twitter'></i>
                         </div>
-                        <p class="RegisterBtn "><a href="register.html">Don't have an account? Sign Up</a></p>
+                        <p class="RegisterBtn "><Link to="/register-page"> Don't have an account? Sign Up</Link></p>
                     </div>
 
                 </div>
