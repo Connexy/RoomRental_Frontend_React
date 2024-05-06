@@ -1,4 +1,9 @@
+import { FaEnvelope } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import TextInput from "../../Components/TextInput";
+import PasswordInput from '../../Components/PasswordInput';
+
+
 
 const Login = () => {
     return (
@@ -11,14 +16,20 @@ const Login = () => {
                         <h2>Login</h2>
                         <form action="#">
                             <div class="input-box">
-                                <i class='bx bxs-user'></i>
-                                <label for="#">Username</label>
-                                <input type="text" placeholder="Enter Your Username*" />
+                            <i class='bx bxs-envelope'></i>
+                                <TextInput
+                                    title="Email"
+                                    name="email"
+                                    placeholder="Enter your Email"
+                                />
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <label for="#">Password</label>
-                                <input type="password" placeholder="Enter Your Password*" />
+                                <PasswordInput 
+                                title = "Password"
+                                name="password"
+                                placeholder="Enter Your Password"
+                                />
                             </div>
                             <div class="forgot-section">
                                 <span><input type="checkbox" name="" id="checked" />Remember Me</span>

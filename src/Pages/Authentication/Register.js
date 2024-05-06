@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import TextInput from "../../Components/TextInput";
+import PasswordInput from "../../Components/PasswordInput";
 
 const Register = () => {
     return (
@@ -12,18 +14,27 @@ const Register = () => {
                         <form action="#">
                             <div class="input-box">
                                 <i class='bx bxs-user'></i>
-                                <label for="#">Username</label>
-                                <input type="text" placeholder="Enter Your Username*" />
+                                <TextInput
+                                    title="Username"
+                                    name="username"
+                                    placeholder="Enter your Username"
+                                />
                             </div>
                             <div class="input-box">
-                                <i class='bx bxs-envelope'></i>
-                                <label for="#">Email</label>
-                                <input type="email" placeholder="Enter Your Email*" />
+                            <i class='bx bxs-envelope'></i>
+                                <TextInput
+                                    title="Email"
+                                    name="email"
+                                    placeholder="Enter your Email"
+                                />
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <label for="#">Password</label>
-                                <input type="password" placeholder="Enter Your Password*" />
+                                <PasswordInput 
+                                title = "Password"
+                                name="password"
+                                placeholder="Enter Your Password"
+                                />
                             </div>
                             <button class="btn" id="register-btn">Register</button>
                         </form>
