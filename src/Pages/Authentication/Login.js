@@ -1,11 +1,66 @@
-import { FaEnvelope } from 'react-icons/fa';
+
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TextInput from "../../Components/TextInput";
 import PasswordInput from '../../Components/PasswordInput';
+import { useEffect, useState } from 'react';
+import Message from '../../Components/Message';
+import { toast } from 'react-toastify';
 
 
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
+
+    const handleInputChange = (event) => {
+        if (event.target.name === 'email') {
+            setEmail(event.target.value);
+        }
+        if (event.target.name == 'password') {
+            setPassword(event.target.value);
+        }
+    }
+
+    const doLogin = (e) => {
+
+        let isLogin = false;
+        if (email == "admin" && password == "admin") {
+            isLogin = true;
+            console.log("login successful");
+
+        }
+
+        if (isLogin) {
+            localStorage.setItem('isLogin', 1);
+            //navigate 
+            navigate('/landingpage');
+            toast.success('Login success', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
+        } else {
+            setErrorMessage("Invalid email or password ?");
+        }
+    }
+
+    useEffect(() => {
+        const isLogin = localStorage.getItem('isLogin');
+        if (isLogin === '1') {
+            navigate
+            // navigate('/landingpage');
+
+        }
+    }, []);
+
     return (
         <div className="body">
             <link rel="stylesheet" href="Login.css"></link>
@@ -15,27 +70,32 @@ const Login = () => {
                     <div class="Form login-form">
                         <h2>Login</h2>
                         <form action="#">
+                            {errorMessage && <Message message={errorMessage} />}
                             <div class="input-box">
-                            <i class='bx bxs-envelope'></i>
+                                <i class='bx bxs-envelope'></i>
                                 <TextInput
                                     title="Email"
                                     name="email"
+                                    value={email}
+                                    handleInputChange={handleInputChange}
                                     placeholder="Enter your Email"
                                 />
                             </div>
                             <div class="input-box">
                                 <i class='bx bxs-lock-alt'></i>
-                                <PasswordInput 
-                                title = "Password"
-                                name="password"
-                                placeholder="Enter Your Password"
+                                <PasswordInput
+                                    title="Password"
+                                    name="password"
+                                    value={password}
+                                    handleInputChange={handleInputChange}
+                                    placeholder="Enter Your Password"
                                 />
                             </div>
                             <div class="forgot-section">
                                 <span><input type="checkbox" name="" id="checked" />Remember Me</span>
                                 <span><a href="#">Forgot Password ?</a></span>
                             </div>
-                            <button class="btn" id="login-btn">Login</button>
+                            <button onClick={doLogin} class="btn" id="login-btn">Login</button>
                         </form>
                         <p>Or Sign up using</p>
                         <div class="social-media">

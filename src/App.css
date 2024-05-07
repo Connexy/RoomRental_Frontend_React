@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.alert-message{
+    margin-top: 5px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background: rgb(235, 139, 139);
+    border: 1px solid rgb(255, 42, 42);
+    border-radius: 10px;
+    
+  }
+  .alert-message p{
+    font-size: 14px;
+    color: rgb(255, 42, 42);
+  }
