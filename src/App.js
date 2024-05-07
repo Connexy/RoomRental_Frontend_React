@@ -12,11 +12,13 @@ function App() {
     <div>
       <BrowserRouter>
       <Routes>
+        <Route path='/' element={<LandingPage />}/>
         <Route path='/login-page' element={<Login />}/>
+        <Route path='/logout-page' element={<Login />}/>
         <Route path='/register-page' element={<Register />}/>
-        <Route path='/landingpage' element={<LandingPage />}/>
+        <Route path='/landing-page' element={<LandingPage />}/>
       </Routes>
-      <button ><Link to='/login-page'>click here</Link></button>
+    
       </BrowserRouter>
       <ToastContainer />
     </div>

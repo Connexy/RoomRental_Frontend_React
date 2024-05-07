@@ -36,7 +36,7 @@ const Login = () => {
         if (isLogin) {
             localStorage.setItem('isLogin', 1);
             //navigate 
-            navigate('/landingpage');
+            navigate('/landing-page');
             toast.success('Login success', {
                 position: "top-right",
                 autoClose: 5000,
@@ -52,14 +52,14 @@ const Login = () => {
         }
     }
 
-    useEffect(() => {
-        const isLogin = localStorage.getItem('isLogin');
-        if (isLogin === '1') {
-            navigate
-            // navigate('/landingpage');
+    // useEffect(() => {
+    //     const isLogin = localStorage.getItem('isLogin');
+    //     if (isLogin === '1') {
+    //        // navigate
+    //         // navigate('/landing-page');
 
-        }
-    }, []);
+    //     }
+    // }, []);
 
     return (
         <div className="body">
