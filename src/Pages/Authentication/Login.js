@@ -52,14 +52,13 @@ const Login = () => {
         }
     }
 
-    // useEffect(() => {
-    //     const isLogin = localStorage.getItem('isLogin');
-    //     if (isLogin === '1') {
-    //        // navigate
-    //         // navigate('/landing-page');
-
-    //     }
-    // }, []);
+    useEffect(() => {
+        const isLogin = localStorage.getItem('isLogin');
+        if (isLogin === '1') {
+           // navigate
+            navigate('/landing-page');
+        }
+    }, []);
 
     return (
         <div className="body">
