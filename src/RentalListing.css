@@ -8,7 +8,6 @@
     text-align: center;
 }
 .containers{
-    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -16,17 +15,11 @@
 .heading-text{
     margin-top: 100px;
 }
-.doubt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 100%;
 
-}
 
 .card {
+    line-height: 1.7;
+    height: 360px;
     /* border: 1px solid #a7a7a7; */
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     width: 300px;
@@ -62,13 +55,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-.card p,
-.card h2 {
-    line-height: 0.3;
-    /* Adjust this value as needed */
-}
-
 #cont-btn {
     background-color: #007BFF;
     color: white;
@@ -99,4 +85,13 @@ img {
     right: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 5px;
+}
+.doubt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    line-height: 3;
 }

@@ -131,11 +131,11 @@ input#checked{
 #register-btn{
     background-color: #60BB46;
 }
-p{
+.Form p{
     color: rgba(0,0,0,.5);
     font-size: 13px;
     font-weight: 500;
-    margin: 25px 0;
+    margin: 20px 0;
 }
 .social-media{
     display: flex;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import image from '../../bg.png';
 
 
 const LandingPage = () => {
@@ -60,6 +61,65 @@ const doLogout = () =>{
             </div>
         </div>
     </header>
+
+    <div class="section">
+        <h1>Find the apartments that fits your lifestyle</h1>
+        <p style={{marginLeft:"30px"}}>We have a solution for every needs</p>
+        <div class="categories">
+          <div class="category">
+            <div class="image">
+                <img src={image} alt="network error"></img>
+            </div>
+            <h3>Luxury Rooms</h3>
+            <p>Detail and finishes of excellence, unique properties complete with every service</p>
+          </div>
+          <div class="category">
+            <div class="image">
+                <img src={image} alt="network error"></img>
+            </div>
+            <h3>Luxury Rooms</h3>
+            <p>Detail and finishes of excellence, unique properties complete with every service</p>
+          </div>
+          <div class="category">
+            <div class="image">
+                <img src={image} alt="network error"></img>
+            </div>
+            <h3>Luxury Rooms</h3>
+            <p>Detail and finishes of excellence, unique properties complete with every service</p>
+          </div>
+          <div class="category">
+            <div class="image">
+                <img src={image} alt="network error"></img>
+            </div>
+            <h3>Luxury Rooms</h3>
+            <p>Detail and finishes of excellence, unique properties complete with every service</p>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="safety-section">
+        <h1>Rent Safely</h1>
+        <p style={{marginLeft: "30px"}}>Our team is at your disposal to help you find the ideal accommodation. Rent online in total comfort.</p>
+        <div class="safety">
+            <div class="section1">
+                <i class="fas fa-home"></i>
+                <h3>Verified apartment</h3>
+                <p>Our apartments are checked before listing to ensure they meet our standards.</p>
+            </div>
+            <div class="section2">
+                <i class="fas fa-mouse-pointer"></i>
+                <h3>Rent with one click</h3>
+                <p>Our online rental process is quick and easy. Just one click and you're done!</p>
+            </div>
+            <div class="section3">
+                <i class="fas fa-users"></i>
+                <h3>A team dedicated to you</h3>
+                <p>We have a dedicated team ready to assist you with any queries or issues.</p>
+            </div>
+        </div>
+    </div>
+
     <Footer />
     </div>
     );
