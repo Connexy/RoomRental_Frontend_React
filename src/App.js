@@ -1,14 +1,16 @@
 import './App.css';
 import './Login.css';
-import './LandingPage.css'
+import './RentalListing.css';
 import Login from './Pages/Authentication/Login';
 import Register from './Pages/Authentication/Register';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import LandingPage from './Pages/Theme/LandingPage';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserDetail from './Pages/Theme/UserDetail';
 import PrivateRoute from './Routes/PrivateRoute';
+import RentalListing from './Pages/Theme/RentalListing';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path='/logout-page' element={<Login />}/>
         <Route path='/register-page' element={<Register />}/>
         <Route path='/landing-page' element={<LandingPage />}/>
+        <Route path='/rental-listing-page' element={<PrivateRoute component={RentalListing}/>}/>
         <Route path='/user-detail-page' element={<PrivateRoute component={UserDetail}/> }/>
       </Routes>
     

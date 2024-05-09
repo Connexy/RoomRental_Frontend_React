@@ -17,5 +17,184 @@
     font-size: 14px;
     color: rgb(255, 42, 42);
   }
-  /* for landing page */
+  /* for landing page*/
+header {
+  background: url(bg.png);
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+.navbar{
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: #E5E3E4;
+  color: black;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.logo{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.home-content{
+  margin-left: 400px;
+  
+
+}
+.home-content ul{
+  display: flex;
+  gap: 60px;
+  
+}
+.home-content ul li{
+  list-style: none;
+  cursor: pointer;
+}
+.home-content ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+/* hover effect for list item*/
+.home-content ul li a:hover{
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  transform: scale(1);
+}
+
+.auth{
+  margin-left: 300px;
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  
+}
+.auth i{
+  height: 35px;
+  width: 35px;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.auth i:hover{
+  background-color: black;
+  color: white;
+}
+/*css for user dropdown  */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.cont{
+  display: flex;
+  justify-content: end;
+  
+}
+.element{
+  margin-top: 100px;
+  margin-right: 250px;
+  height: 300px;
+  width: 50%;
+  /* border: solid white 1px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.searchbox{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  border-radius: 30px;
+  background-color: white;
+}
+.searchbox button{
+  width: 70px;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.searchbox input{
+  border: none;
+  border-bottom: 2px solid rgb(122, 122, 122);
+  
+}
+.searchbox input:focus{
+  outline: none; /* Remove outline */
+}
+
+.element h1, .element p, .element .searchbox{
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* css for footer*/
+.footer {
+  height: 70px;
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #404040;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer p {
+  font-size: 12px;
+  color: white;
+  margin: 10px 0;
+}
+.social-icons {
+  font-size: 24px;
+  
+}
+.social-icons i {
+  margin: 0 10px;
+}
+
+
+
   

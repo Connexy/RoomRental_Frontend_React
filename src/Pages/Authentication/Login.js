@@ -5,7 +5,7 @@ import TextInput from "../../Components/TextInput";
 import PasswordInput from '../../Components/PasswordInput';
 import { useEffect, useState } from 'react';
 import Message from '../../Components/Message';
-import { toast } from 'react-toastify';
+import {showSuccessMessage} from '../../Utils/Notification';
 
 
 
@@ -19,7 +19,7 @@ const Login = () => {
         if (event.target.name === 'email') {
             setEmail(event.target.value);
         }
-        if (event.target.name == 'password') {
+        if (event.target.name === 'password') {
             setPassword(event.target.value);
         }
     }
@@ -37,16 +37,7 @@ const Login = () => {
             localStorage.setItem('isLogin', 1);
             //navigate 
             navigate('/landing-page');
-            toast.success('Login success', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-            });
+            showSuccessMessage("Login Successful");
         } else {
             setErrorMessage("Invalid email or password ?");
         }
@@ -92,7 +83,7 @@ const Login = () => {
                             </div>
                             <div class="forgot-section">
                                 <span><input type="checkbox" name="" id="checked" />Remember Me</span>
-                                <span><a href="#">Forgot Password ?</a></span>
+                                <span>Forgot Password ?</span>
                             </div>
                             <button onClick={doLogin} class="btn" id="login-btn">Login</button>
                         </form>
