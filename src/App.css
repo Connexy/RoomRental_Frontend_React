@@ -17,7 +17,7 @@
     font-size: 14px;
     color: rgb(255, 42, 42);
   }
-  /* for landing page*/
+  /*####################################################  css for landing page  ###############################################################*/
 header {
   background: url(bg.png);
   background-size: cover;
@@ -280,7 +280,7 @@ header {
   left: 0;
   
 }
-/* ############################################################################for rental listing page*/
+/* ##########################################################  for rental listing page ####################################################*/
 
 .big-container{
   background-color: white;
@@ -379,5 +379,89 @@ img {
   width: 100%;
   line-height: 3;
 }
+/* ####################################################### css for user details ##############################################################*/
+.user_heading{
+  text-align: center;
+  font-size: 20px;
+}
+.large_container{
+  padding-top: 70px;
+  height: calc(100vh - 70px - 80px);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.user_profile{
+  margin: 20px;
+  height: 350px;
+  width: 20%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url('avatar.png') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profession {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.buttonfollow {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #007BFF;
+}
+.user_details{
+  margin: 18px;
+  height: 350px;
+  width: 70%;
+  border: 1px solid black;
+}
+.buttonedit {
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #1782b8;
+}
+.user_details p{
+  color: #6C757D;
+  margin-left: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #6C757D;;
+}
+.user_details p strong {
+  color: #1A202C;
+}
+
 
   
