@@ -276,6 +276,17 @@ header {
   margin: 0 10px;
 }
 
+/* color for error msg in register page */
+.label-danger {
+  color: rgb(229, 38, 38);
+  font-size: 12px;
+  
+  position: absolute;
+  bottom: -20px; /* Adjust as needed */
+  left: 0;
+  
 
+
+}
 
   
