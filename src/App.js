@@ -1,6 +1,5 @@
 import './App.css';
 import './Login.css';
-import './RentalListing.css';
 import Login from './Pages/Authentication/Login';
 import Register from './Pages/Authentication/Register';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';

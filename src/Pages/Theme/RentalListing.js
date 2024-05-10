@@ -10,7 +10,7 @@ const RentalListing = () => {
         <div>
              
             <Navbar />
-            <div class="main-container">
+            <div class="big-container">
                 <div className='heading-text'>
                 <h1>Are you looking for rooms ?</h1>
                 </div>
