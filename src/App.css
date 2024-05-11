@@ -624,3 +624,159 @@ img {
   cursor: pointer;
   width: 100%;
 }
+
+/* ########################################## css for room details #######################################################################*/
+.room-detail-headings{
+  padding-top: 80px;
+  text-align: center;
+  margin-bottom: 30px;
+  
+}
+.detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.detail-image {
+  height: 400px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+
+.detail-content {
+  /* border: 1px solid black; */
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 600px;
+  
+  
+}
+
+.room-title {
+  font-size: 1.2em;
+  color: #333; /* Dark grey text */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.roomdetail-availability {
+  font-size: 1.2em;
+  color: #28a745; /* Green text */
+  margin-bottom: 10px; /* Space below the availability */
+}
+
+.price {
+  font-size: 1.2em;
+  color: #333; /* Dark grey text */
+ 
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+}
+
+.payment-option label {
+  margin-left: 10px;
+}
+
+
+.btn-book {
+  background-color: #0090BD;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  height: 40px;
+  width: 150px;
+  margin-top: 50px;
+  
+}
+.btn-book:hover {
+  /* Change background color on hover */
+  background-color: #0090BD;
+  color: white;
+  border: 1px solid white;
+  
+}
+.room-detail-contents {
+  border-bottom: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 80px;
+  
+  /* border: 1px solid black; */
+}
+.room-features-content{
+  height: 500px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+.room-location{
+  height: 500px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+
+.room-features li {
+  list-style-type: none;
+  
+}
+
+
+.room-features i {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.features-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.features-grid div{
+  font-size: 14px;
+}
+.room-description-text {
+  margin-top: 10px;
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto; /* Adds vertical scrollbar if content overflows */
+  word-wrap: break-word;
+  text-align: justify; /* Aligns the text evenly on both the left and right margins */
+  padding: 0 20px; /* Adds 20px of space to the left and right of the text */
+}
+
+.room-description p {
+  line-height: 1.5; /* Adjusts the space between lines */
+  margin: 10px 0; /* Adds 10px of space above and below each paragraph */
+  font-size: 14px;
+}
+#map {
+  height: auto;
+  width: 100%;
+}
+.location-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+

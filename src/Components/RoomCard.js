@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 
  const RoomCard = ({roomImage, avaliabilityDate, location, description, price }) =>{
@@ -14,7 +14,7 @@ import React from 'react';
         <p style={{fontSize: "16px"}}>{description}</p>
         <div class="price-button">
             <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
-            <button class="button">Book Now</button>
+           <Link to='/room-details-page'><button class="button">Book Now</button></Link> 
         </div>
     </div>
 
