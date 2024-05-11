@@ -67,6 +67,7 @@ const LandingPage = () => {
             <div class="section">
                 <h1>Find the apartments that fits your lifestyle</h1>
                 <p style={{ marginLeft: "30px" }}>We have a solution for every needs</p>
+
                 <div class="categories">
 
                     <LuxuryRoom
@@ -88,10 +89,10 @@ const LandingPage = () => {
                     />
                     <LuxuryRoom
                         image={image}
-                        title="Benifitted Rooms"
+                        title="Super Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
-                    
+                   
                     
 
                 </div>
@@ -135,10 +136,7 @@ const LandingPage = () => {
                         text="It was great and I found... room found suitable as I want"
                         reviewerName="Shyam Bahadur"
                     />
-                    <Review
-                        text="It was great and I found... room found suitable as I want"
-                        reviewerName="Hari Bahadur"
-                    />
+                   
 
                 </div>
 

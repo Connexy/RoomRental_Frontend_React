@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-const RoomCard = ({roomImage, avabilityDate, location, description, price }) =>{
-    return(
+
+ const RoomCard = ({roomImage, avaliabilityDate, location, description, price }) =>{
+     return(
         <div class="card">
         <div class="image-container">
             <img src={roomImage} alt="check internet connection" />
-            <div class="availability">Available from {avabilityDate}</div>
+            <div class="availability">Available from {avaliabilityDate}</div>
         </div>
         <p style={{ color: "gray",fontSize: "14px" }}>private room</p>
         <h3>{location}</h3>
@@ -16,6 +17,7 @@ const RoomCard = ({roomImage, avabilityDate, location, description, price }) =>{
             <button class="button">Book Now</button>
         </div>
     </div>
+
     );
 }
 export default RoomCard;

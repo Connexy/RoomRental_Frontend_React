@@ -18,9 +18,10 @@ const RentalListing = () => {
                 </div>
                 
                 <div class="containers">
+                    
                     {/* <div class="card">
                         <div class="image-container">
-                            <img src={roomimage} alt="check internet connection" />
+                            <img src={roomImage} alt="check internet connection" />
                             <div class="availability">Available from 30 May, 2023</div>
                         </div>
                         <p style={{ color: "gray",fontSize: "14px" }}>private room</p>
@@ -33,28 +34,35 @@ const RentalListing = () => {
                     </div> */}
 
                     <RoomCard 
-                    roomimage ={roomImage}
-                    avabilityDate="30 May, 2023"
+                    roomImage ={roomImage}
+                    avaliabilityDate="30 May, 2023"
                     location="Dhobighat, Lalitpur"
                     description="Great and suitable room"
                     price = "5000"
                     />
                     <RoomCard 
-                    roomimage ={roomImage}
+                    roomImage ={roomImage}
                     avabilityDate="1 May, 2023"
                     location="Kumaripati, Lalitpur"
                     description="Great and suitable room"
                     price = "4000"
                     />
                     <RoomCard 
-                    roomimage ={roomImage}
+                    roomImage ={roomImage}
                     avabilityDate="1 May, 2023"
                     location="Manbhawan, Lalitpur"
                     description="Great and suitable room"
                     price = "3500"
                     />
                     <RoomCard 
-                    roomimage ={roomImage}
+                    roomImage ={roomImage}
+                    avabilityDate="1 May, 2023"
+                    location="Nakkhu, Lalitpur"
+                    description="Great and suitable room"
+                    price = "6000"
+                    />
+                    <RoomCard 
+                    roomImage ={roomImage}
                     avabilityDate="1 May, 2023"
                     location="Nakkhu, Lalitpur"
                     description="Great and suitable room"
