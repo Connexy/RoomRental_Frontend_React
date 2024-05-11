@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import image from '../../bg.png';
 import LuxuryRoom from "../../Components/LuxuryRoom";
+import Review from "../../Components/Review";
 
 
 const LandingPage = () => {
@@ -85,6 +86,13 @@ const LandingPage = () => {
                         title="Benifitted Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
+                    <LuxuryRoom
+                        image={image}
+                        title="Benifitted Rooms"
+                        description="Detail and finishes of excellence, unique properties complete with every service"
+                    />
+                    
+                    
 
                 </div>
             </div>
@@ -107,6 +115,50 @@ const LandingPage = () => {
                         <h3>A team dedicated to you</h3>
                         <p>We have a dedicated team ready to assist you with any queries or issues.</p>
                     </div>
+                </div>
+            </div>
+
+            <section class="reviews-section">
+                <h1>Guaranteed by our reviews</h1>
+                <p>Our customers are 100% satisfied and our reviews speak for us!</p>
+                <div class="review-box">
+
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Kiswor Chhetri"
+                    />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Ram Bahadur"
+                    />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Shyam Bahadur"
+                    />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Hari Bahadur"
+                    />
+
+                </div>
+
+            </section>
+
+            <div class="count-container">
+                <div class="stat">
+                    <i class="fas fa-heart"></i>
+                    <div class="count">45793</div>
+                    <div>Happy Tenants</div>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-key"></i>
+                    <div class="count">45382</div>
+                    <div>Rooms Rented</div>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-building"></i>
+                    <div class="count">54762</div>
+                    <div>Properties Listed</div>
                 </div>
             </div>
 
