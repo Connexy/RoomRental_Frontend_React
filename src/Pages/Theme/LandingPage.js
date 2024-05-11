@@ -38,7 +38,7 @@ const LandingPage = () => {
                             <li><Link to='/landing-page' className="link">Home</Link></li>
                             <li><Link to='/rental-listing-page' className="link">RentalListing</Link></li>
                             <li><Link to='' className="link">Blogs</Link></li>
-                            <li><Link to='' className="link">Support</Link></li>
+                            <li><Link to='/contact-page' className="link">Contact</Link></li>
                         </ul>
                     </div>
                     <div class="auth">

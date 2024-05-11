@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import UserDetail from './Pages/Theme/UserDetail';
 import PrivateRoute from './Routes/PrivateRoute';
 import RentalListing from './Pages/Theme/RentalListing';
+import Contact from './Pages/Theme/Contact';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path='/landing-page' element={<LandingPage />}/>
         <Route path='/rental-listing-page' element={<PrivateRoute component={RentalListing}/>}/>
         <Route path='/user-detail-page' element={<PrivateRoute component={UserDetail}/> }/>
+        <Route path='//contact-page' element={<PrivateRoute component={Contact}/> }/>
+
       </Routes>
     
       </BrowserRouter>
