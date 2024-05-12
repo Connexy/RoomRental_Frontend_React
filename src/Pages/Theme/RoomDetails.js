@@ -88,7 +88,7 @@ const RoomDetails = () => {
                             </div>
                             <div class="form-group">
                                 <label for="contact-number">Contact number *</label>
-                                <input type="number" id="contact-number" />
+                                <input type="number " id="contact-number" />
                             </div>
                             <div class="form-group">
                                 <label for="id-upload">Identification Document (Upload any one) *</label>

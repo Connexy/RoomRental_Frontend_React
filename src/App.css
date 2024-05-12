@@ -165,7 +165,7 @@ header {
 }
 
 .searchbox button {
-  width: 70px;
+  width: 80px;
   padding: 5px;
   border-radius: 20px;
   border: none;
@@ -212,7 +212,7 @@ header {
 .category {
   margin-top: 20px;
   padding: 8px;
-  height: 400px;
+  height: auto;
   width: 300px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   ;
@@ -227,8 +227,10 @@ header {
 }
 
 .image {
-  height: 300px;
+  height: 200px;
   background-color: #ccc;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 /* css for safety section */
@@ -397,7 +399,7 @@ header {
 }
 
 .big-container h1 {
-  text-align: center;
+margin-left: 30px;
 }
 
 .containers {
@@ -468,10 +470,16 @@ header {
 img {
   width: 100%;
   height: 200px;
+  transition: transform 0.25s ease;
+  
+}
+img:hover{
+  transform: scale(1.1);
 }
 
 .image-container {
   position: relative;
+  overflow: hidden;
 }
 
 .availability {
@@ -648,7 +656,8 @@ img {
 .detail-image {
   height: 400px;
   width: 600px;
-  /* border: 1px solid black; */
+  overflow: hidden;
+  
 }
 
 .detail-content {
@@ -675,6 +684,11 @@ img {
   width: 200px;
   border: 1px solid #0090BD;
   border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+.sub-image-box:hover{
+  transform: scale(1.1);
 }
 .sub-box{
   margin: 10px;
@@ -825,3 +839,36 @@ img {
   text-align: center;
 }
 
+/* #################################################### css for about us ####################################################################*/
+.about-us-content{
+  padding-top: 80px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  border-bottom: 80px;
+  align-items: center;
+}
+.about-us-header{
+  align-items: center;
+}
+.about-us-description {
+  text-align: start;
+  align-self: flex-start;
+  height: auto;
+  padding: 50px;
+}
+
+.about-us-description h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.about-us-description h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.about-us-description p {
+  margin-bottom: 20px;
+  text-align: justify;
+}

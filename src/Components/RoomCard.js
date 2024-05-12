@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
      return(
         <div class="card">
         <div class="image-container">
-            <img src={roomImage} alt="check internet connection" />
+          <Link to='/room-details-page'><img src={roomImage} alt="check internet connection" /></Link>
             <div class="availability">Available from {avaliabilityDate}</div>
         </div>
         <p style={{ color: "gray",fontSize: "14px" }}>private room</p>

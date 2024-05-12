@@ -1,57 +1,17 @@
-import { Link } from "react-router-dom";
-import { toast } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import image from '../../bg.png';
 import LuxuryRoom from "../../Components/LuxuryRoom";
 import Review from "../../Components/Review";
+import Navbar from "./Navbar";
 
 
 const LandingPage = () => {
-
-    const navigate = useNavigate();
-    const doLogout = () => {
-        toast.success('Logout success', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-        localStorage.removeItem('isLogin');
-        navigate('/logout-page');
-    }
 
     return (
         <div>
 
             <header>
-                <div class="navbar">
-                    <div class="logo">
-                        <h1>RoomLess</h1>
-                    </div>
-                    <div class="home-content">
-                        <ul>
-                            <li><Link to='/landing-page' className="link">Home</Link></li>
-                            <li><Link to='/rental-listing-page' className="link">Rental Listing</Link></li>
-                            <li><Link to='' className="link">About Us</Link></li>
-                            <li><Link to='/contact-page' className="link">Contact</Link></li>
-                        </ul>
-                    </div>
-                    <div class="auth">
-                        <div class="dropdown">
-                            <i class="fa-solid fa-user"></i>
-                            <div class="dropdown-content">
-                                <Link to='/login-page' >Login</Link>
-                                <Link to='/user-detail-page' >UserDetail</Link>
-                            </div>
-                        </div>
-                        <i onClick={doLogout} class="fa-solid fa-right-from-bracket"></i>
-                    </div>
-                </div>
+                <Navbar/>
                 <div class="cont">
                     <div class="element">
                         <h1 style={{ fontWeight: "bolder" }}>The best home everywhere</h1>
@@ -92,8 +52,8 @@ const LandingPage = () => {
                         title="Super Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
-                   
-                    
+
+
 
                 </div>
             </div>
@@ -136,7 +96,7 @@ const LandingPage = () => {
                         text="It was great and I found... room found suitable as I want"
                         reviewerName="Shyam Bahadur"
                     />
-                   
+
 
                 </div>
 
