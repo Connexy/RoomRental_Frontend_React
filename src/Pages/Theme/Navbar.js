@@ -28,8 +28,8 @@ const Navbar = () =>{
             <div class="home-content">
                 <ul>
                     <li><Link to='/landing-page'className="link">Home</Link></li>
-                    <li><Link to='/rental-listing-page'className="link">RentalListing</Link></li>
-                    <li><Link to=''className="link">Blogs</Link></li>
+                    <li><Link to='/rental-listing-page'className="link">Rental Listing</Link></li>
+                    <li><Link to=''className="link">About Us</Link></li>
                     <li><Link to='/contact-page'className="link">Contact</Link></li>
                 </ul>
             </div>

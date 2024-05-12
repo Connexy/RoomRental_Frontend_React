@@ -45,7 +45,7 @@ header {
 }
 
 .home-content {
-  margin-left: 400px;
+  margin-left: 200px;
 
 
 }
@@ -59,6 +59,7 @@ header {
 .home-content ul li {
   list-style: none;
   cursor: pointer;
+  
 }
 
 .home-content ul li a {
@@ -76,7 +77,7 @@ header {
 }
 
 .auth {
-  margin-left: 300px;
+  margin-left: 380px;
   height: 60px;
   width: 200px;
   display: flex;
@@ -458,9 +459,9 @@ header {
 }
 
 #cont-btn:hover {
-  background-color: white;
+
   color: #007BFF;
-  border: 1px solid #007BFF;
+  border: 1px solid white;
 }
 
 /* for the image section  */
@@ -491,6 +492,10 @@ img {
   height: 400px;
   width: 100%;
   line-height: 3;
+}
+.doubt a{
+  text-decoration: none;
+  color: white;
 }
 
 /* ####################################################### css for user details ##############################################################*/
@@ -626,17 +631,16 @@ img {
 }
 
 /* ########################################## css for room details #######################################################################*/
+
 .room-detail-headings{
-  padding-top: 80px;
   text-align: center;
-  margin-bottom: 30px;
-  
+  padding-top: 80px;
 }
 .detail-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: auto;
+  height: 500px;
   width: 100%;
   /* border: 1px solid black; */
 }
@@ -648,99 +652,66 @@ img {
 }
 
 .detail-content {
-  /* border: 1px solid black; */
+  
   line-height: 2;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   height: 400px;
-  width: 600px;
-  
-  
+  width: 600px;  
 }
-
-.room-title {
-  font-size: 1.2em;
-  color: #333; /* Dark grey text */
-  margin-bottom: 10px; /* Space below the title */
-}
-
-.roomdetail-availability {
-  font-size: 1.2em;
-  color: #28a745; /* Green text */
-  margin-bottom: 10px; /* Space below the availability */
-}
-
-.price {
-  font-size: 1.2em;
-  color: #333; /* Dark grey text */
- 
-}
-
-.payment-methods {
+.sub-image{
   display: flex;
-  justify-content: space-evenly;
+  margin: 10px;
+  height: 200px;
+  width: 580px;
+  /* border: 1px solid #0090BD; */
+}
+.sub-image-box{
+  background-image: url("./bg.png");
+  background-size: cover;
+  margin: 10px;
+  height: 150px;
+  width: 200px;
+  border: 1px solid #0090BD;
+  border-radius: 5px;
+}
+.sub-box{
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  /* border: 1px solid #0090BD; */
+}
+.sub-box i{
+  font-size: 20px;
+  margin-right: 10px;
+}
+.sub-box div{
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.payment-option {
-  display: flex;
-  align-items: center;
-}
 
-.payment-option label {
-  margin-left: 10px;
-}
-
-
-.btn-book {
-  background-color: #0090BD;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 12px;
-  cursor: pointer;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-  height: 40px;
-  width: 150px;
-  margin-top: 50px;
-  
-}
-.btn-book:hover {
-  /* Change background color on hover */
-  background-color: #0090BD;
-  color: white;
-  border: 1px solid white;
-  
-}
 .room-detail-contents {
-  border-bottom: 100px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: auto;
+  height: 400px;
   width: 100%;
-  margin-bottom: 80px;
   
   /* border: 1px solid black; */
 }
 .room-features-content{
-  height: 500px;
+  height: 300px;
   width: 600px;
   /* border: 1px solid black; */
 }
-.room-location{
-  height: 500px;
+.room-description{
+  height: 300px;
   width: 600px;
   /* border: 1px solid black; */
 }
-
-.room-features li {
-  list-style-type: none;
-  
-}
-
-
 .room-features i {
   margin-left: 20px;
   margin-right: 10px;
@@ -755,6 +726,7 @@ img {
 .features-grid div{
   font-size: 14px;
 }
+
 .room-description-text {
   margin-top: 10px;
   max-height: 300px; /* Adjust as needed */
@@ -769,14 +741,87 @@ img {
   margin: 10px 0; /* Adds 10px of space above and below each paragraph */
   font-size: 14px;
 }
+
+
+.location-checkout{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  
+}
+.room-location{
+  height: 650px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
+.room-checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  width: 600px;
+  /* border: 1px solid black; */
+}
 #map {
   height: auto;
   width: 100%;
 }
-.location-header {
-  text-align: center;
+.location-header{
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+
+.checkout-box{
+  height: 100%;
+  width: 450px;
+  border-radius: 10px;
+  /* border: 1px solid #0090BD; */
+}
+
+/* contact form css  */
+.contact-form {
+  height: auto;
+  width: 400px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 5px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.contact-form-button {
+  background-color: #0090BD;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
 }
 
