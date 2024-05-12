@@ -3,15 +3,19 @@ import image from '../../bg.png';
 import LuxuryRoom from "../../Components/LuxuryRoom";
 import Review from "../../Components/Review";
 import Navbar from "./Navbar";
+import { useEffect } from "react";
 
 
 const LandingPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div>
 
             <header>
-                <Navbar/>
+                <Navbar />
                 <div class="cont">
                     <div class="element">
                         <h1 style={{ fontWeight: "bolder" }}>The best home everywhere</h1>

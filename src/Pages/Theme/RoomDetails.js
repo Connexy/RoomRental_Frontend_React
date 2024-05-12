@@ -1,8 +1,18 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import detailimage from '../../bg.png';
+import { showSuccessMessage } from "../../Utils/Notification";
+import { useNavigate } from "react-router-dom";
 
 const RoomDetails = () => {
+
+const navigate = useNavigate();
+
+const formSubmit = () =>{
+    showSuccessMessage("Booking Form Submitted Successfully");
+    navigate('/landing-page');
+
+}
     return (
         <div>
             <Navbar />
@@ -77,14 +87,13 @@ const RoomDetails = () => {
                     </div>
                 </div>
                 <div class="room-checkout">
-
                     <div class="checkout-box">
                         <div class="checkout-header"><h2>Contact to House Owner</h2></div>
-                        <form class="contact-form">
+                        <div class="contact-form">
                             <h3>Contact Form</h3>
                             <div class="form-group">
                                 <label for="name">Name *</label>
-                                <input type="text" id="name" required />
+                                <input type="text" id="name"/>
                             </div>
                             <div class="form-group">
                                 <label for="contact-number">Contact number *</label>
@@ -93,15 +102,17 @@ const RoomDetails = () => {
                             <div class="form-group">
                                 <label for="id-upload">Identification Document (Upload any one) *</label>
                                 <small>College or Office Card, Citizenship, Passport, Driving license</small>
-                                <input type="file" id="id-upload" required />
+                                <input type="file" id="id-upload" />
 
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea id="message"></textarea>
                             </div>
-                            <button class="contact-form-button" type="submit">Submit</button>
-                        </form>
+                            <button 
+                            onClick={formSubmit}
+                            class="contact-form-button" >Submit</button>
+                        </div>
 
                     </div>
                 </div>
