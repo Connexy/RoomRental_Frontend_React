@@ -31,6 +31,13 @@ const Navbar = () => {
                         <li><Link to='/rental-listing-page'>Rental Listing</Link></li>
                         <li><Link to='/about-us-page'>About Us</Link></li>
                         <li><Link to='/contact-page'>Contact</Link></li>
+                        <div class="dropdown">
+                            <i style={{fontSize:"20px"}} class="fa-solid fa-bell"></i>
+                            <div class="dropdown-content">
+                                <a href="#">noti 1</a>
+                                <a href="#">noti 2</a>
+                            </div>
+                        </div>
                     </ul>
                 </div>
                 <div class="auth">
