@@ -32,7 +32,7 @@ const Navbar = () => {
                         <li><Link to='/about-us-page'>About Us</Link></li>
                         <li><Link to='/contact-page'>Contact</Link></li>
                         <div class="dropdown">
-                            <i style={{fontSize:"20px"}} class="fa-solid fa-bell"></i>
+                            <i style={{fontSize:"20px", cursor:"pointer"}} class="fa-solid fa-bell"></i>
                             <div class="dropdown-content">
                                 <a href="#">noti 1</a>
                                 <a href="#">noti 2</a>
