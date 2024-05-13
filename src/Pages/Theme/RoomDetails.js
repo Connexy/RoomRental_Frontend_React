@@ -3,16 +3,19 @@ import Navbar from "./Navbar";
 import detailimage from '../../bg.png';
 import { showSuccessMessage } from "../../Utils/Notification";
 import { useNavigate } from "react-router-dom";
+import { DetailImage } from '../../Components/RoomDetail';
+
+
 
 const RoomDetails = () => {
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const formSubmit = () =>{
-    showSuccessMessage("Booking Form Submitted Successfully");
-    navigate('/landing-page');
+    const formSubmit = () => {
+        showSuccessMessage("Booking Form Submitted Successfully");
+        navigate('/landing-page');
 
-}
+    }
     return (
         <div>
             <Navbar />
@@ -20,24 +23,17 @@ const formSubmit = () =>{
                 <h1>Room Details</h1>
             </div>
             <div class="detail-container">
-                <div class="detail-image">
-                    <img style={{ height: "400px", width: "600px" }} src={detailimage} alt="network error" />
-                </div>
-                <div class="detail-content">
-                    <div class="sub-image">
-                        <div class="sub-image-box"></div>
-                        <div class="sub-image-box"></div>
-                        <div class="sub-image-box"></div>
-                    </div>
-                    <div class="sub-box">
-                        <div><i class="fas fa-money-bill-wave fa-fw"></i> Rs 5000 per month</div>
-                        <div><i class="fas fa-map-marker-alt fa-fw"></i> Dhobighat, Lalitpur</div>
-                        <div><i class="fas fa-road fa-fw"></i> Nearby Road</div>
-                    </div>
-                </div>
-
+                
+                <DetailImage
+                roomdetailimage={detailimage}
+                price="5000"
+                location="Dhobighat, Lalitpur"
+                nearBy="Road"
+                 />
 
             </div>
+
+
 
             <div class="room-detail-contents">
                 <div class="room-features-content">
@@ -80,7 +76,8 @@ const formSubmit = () =>{
                 <div class="room-location">
                     <div class="location-header"><h2>Where it is located</h2></div>
                     <div id="map">
-                        <iframe class="map-frame"
+                        <iframe
+                            class="map-frame"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.645074638183!2d85.32024431453747!3d27.68230098279939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a1c8b22d4d%3A0x228b22a745a72a9f!2sDhobighat%2C%20Lalitpur%2044600!5e0!3m2!1sen!2snp!4v1641253411111!5m2!1sen!2snp"
                             style={{ width: "600px", height: "525px", border: "0" }}
                             allowfullscreen="" loading="lazy"></iframe>
@@ -93,7 +90,7 @@ const formSubmit = () =>{
                             <h3>Contact Form</h3>
                             <div class="form-group">
                                 <label for="name">Name *</label>
-                                <input type="text" id="name"/>
+                                <input type="text" id="name" />
                             </div>
                             <div class="form-group">
                                 <label for="contact-number">Contact number *</label>
@@ -109,9 +106,9 @@ const formSubmit = () =>{
                                 <label for="message">Message</label>
                                 <textarea id="message"></textarea>
                             </div>
-                            <button 
-                            onClick={formSubmit}
-                            class="contact-form-button" >Submit</button>
+                            <button
+                                onClick={formSubmit}
+                                class="contact-form-button" >Submit</button>
                         </div>
 
                     </div>

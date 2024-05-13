@@ -23,11 +23,11 @@ const UserDetail = () => {
                     <div className="user_heading">
                     <h3>User Details</h3>
                     </div>
-                    <p><strong>Name:</strong> Kenneth Valdez</p>
-                    <p><strong>Email:</strong> email@example.com</p>
+                    <p><strong>Name:</strong> Kiswor Chhetri</p>
+                    <p><strong>Email:</strong> kisworchhetri.2001@example.com</p>
                     <p><strong>Phone:</strong> +1 234 567 890</p>
-                    <p><strong>Mobile:</strong> +1 234 567 891</p>
-                    <p><strong>Address:</strong> 1234 Street, City, State, Country</p>
+                    <p><strong>Mobile:</strong> +977 9741710841</p>
+                    <p><strong>Address:</strong> Afaldol Dhobighat, Lalitpur, Bagmati, Nepal</p>
                     <button class="buttonedit">Edit</button>
                 </div>
 

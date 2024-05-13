@@ -652,6 +652,13 @@ img:hover{
   width: 100%;
   /* border: 1px solid black; */
 }
+.room_Detail_image{
+  display: flex;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 100%;
+  margin-top: 50px;
+}
 
 .detail-image {
   height: 400px;

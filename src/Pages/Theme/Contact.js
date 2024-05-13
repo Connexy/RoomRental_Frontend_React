@@ -7,8 +7,8 @@ const Contact = () => {
             <Navbar />
             <div className="contact-body">
                 <h2>Contact US </h2>
-            <div class="contact-form">
-                
+                <div class="contact-form">
+
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
@@ -22,8 +22,8 @@ const Contact = () => {
                     <textarea id="message" name="message" placeholder="Write something.." style={{ height: "200px" }}></textarea>
 
                     <button type="submit">Submit</button>
-                
-            </div>
+
+                </div>
             </div>
             <Footer />
         </div>

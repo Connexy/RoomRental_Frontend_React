@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
         <p style={{fontSize: "16px"}}>{description}</p>
         <div class="price-button">
             <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
-           <Link to='/room-details-page'><button class="button">Book Now</button></Link> 
+           <Link to='/room-details-page'><button class="button">View Details</button></Link> 
         </div>
     </div>
 
