@@ -1,8 +1,30 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
+import { useNavigate } from "react-router-dom";
+import {showSuccessMessage} from "../../Utils/Notification";
 
 const Contact = () => {
+
+const navigate = useNavigate();
+const [formData, setFormData] = useState ({
+    firstname: "", 
+    lastname: "",
+    email: "",
+    message: "",
+});
+
+const handleChange = (e) =>{
+    setFormData({ ...formData, [e.target.name]: e.target.value});
+};
+
+const handleSubmit = () =>{
+    console.log(formData);
+    showSuccessMessage("Thank you for your message our member will contact you soon");
+    navigate('/landing-page');
+    
+}
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -14,18 +36,20 @@ const Contact = () => {
                 <div class="contact-form">
 
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your first name.." />
+                    <input onChange={handleChange} type="text" id="fname" name="firstname" placeholder="Your first name.." />
 
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+                    <input onChange={handleChange} type="text" id="lname" name="lastname" placeholder="Your last name.." />
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email.." />
+                    <input onChange={handleChange} type="email" id="email" name="email" placeholder="Your email.." />
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Write something.." style={{ height: "200px" }}></textarea>
+                    <textarea onChange={handleChange} id="message" name="message" placeholder="Write something.." style={{ height: "200px" }}></textarea>
 
-                    <button type="submit">Submit</button>
+                    <button 
+                    onClick={handleSubmit}
+                    type="submit">Submit</button>
 
                 </div>
             </div>
