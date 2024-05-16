@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.layout-main-body{
+  min-height: 100vh;
+}
 .alert-message {
   margin-top: 5px;
   display: flex;

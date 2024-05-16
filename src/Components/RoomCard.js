@@ -1,12 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import {useNavigate} from 'react-router-dom';
 
 
- const RoomCard = ({roomImage, avaliabilityDate, location, description, price }) =>{
+ const RoomCard = ({roomImage, avaliabilityDate, location, description, price, roomID }) =>{
+
+const navigate = useNavigate( );
+
+const goDetailPage = () =>{
+    navigate(`/room-details-page/`);
+}
+
      return(
         <div class="card">
         <div class="image-container">
-          <Link to='/room-details-page'><img src={roomImage} alt="check internet connection" /></Link>
+          <img src={roomImage} alt="check internet connection" />
             <div class="availability">Available from {avaliabilityDate}</div>
         </div>
         <p style={{ color: "gray",fontSize: "14px" }}>private room</p>
@@ -14,7 +21,7 @@ import { Link } from 'react-router-dom';
         <p style={{fontSize: "16px"}}>{description}</p>
         <div class="price-button">
             <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
-           <Link to='/room-details-page'><button class="button">View Details</button></Link> 
+           <button onClick={goDetailPage} class="button">View Details</button>
         </div>
     </div>
 

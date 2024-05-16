@@ -12,6 +12,7 @@ import RentalListing from './Pages/Theme/RentalListing';
 import Contact from './Pages/Theme/Contact';
 import RoomDetails from './Pages/Theme/RoomDetails';
 import AboutUs from './Pages/Theme/AboutUs';
+import Layout from './Pages/Theme/Layout';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<LandingPage />}/>
+        <Route path='/' element={<Layout />}/>
         <Route path='/login-page' element={<Login />}/>
         <Route path='/logout-page' element={<Login />}/>
         <Route path='/register-page' element={<Register />}/>
