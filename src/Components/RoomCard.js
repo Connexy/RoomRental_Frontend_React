@@ -1,15 +1,10 @@
 
 import {useNavigate} from 'react-router-dom';
-
-
- const RoomCard = ({roomImage, avaliabilityDate, location, description, price, roomID }) =>{
-
+const RoomCard = ({roomImage, avaliabilityDate, location, description, price, roomID }) =>{
 const navigate = useNavigate( );
-
 const goDetailPage = () =>{
-    navigate(`/room-details-page/`);
+    navigate(`/room-details-page`);
 }
-
      return(
         <div class="card">
         <div class="image-container">

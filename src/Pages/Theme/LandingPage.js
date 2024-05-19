@@ -1,5 +1,8 @@
 import Footer from "./Footer";
-import image from '../../bg.png';
+import lux1 from '../../images/image1.jpg';
+import lux2 from '../../images/image2.jpg';
+import lux3 from '../../images/image3.jpg';
+import lux4 from '../../images/image1.jpg';
 import LuxuryRoom from "../../Components/LuxuryRoom";
 import Review from "../../Components/Review";
 import Navbar from "./Navbar";
@@ -35,24 +38,24 @@ const LandingPage = () => {
                 <div class="categories">
 
                     <LuxuryRoom
-                        image={image}
+                        image={lux1}
                         title="Luxury Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
 
                     <LuxuryRoom
-                        image={image}
+                        image={lux2}
                         title="Premium Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
 
                     <LuxuryRoom
-                        image={image}
+                        image={lux3}
                         title="Benifitted Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />
                     <LuxuryRoom
-                        image={image}
+                        image={lux4}
                         title="Super Rooms"
                         description="Detail and finishes of excellence, unique properties complete with every service"
                     />

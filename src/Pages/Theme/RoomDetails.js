@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import detailimage from '../../bg.png';
+import Dimage from '../../images/bg.png';
 import { showSuccessMessage } from "../../Utils/Notification";
 import { useNavigate } from "react-router-dom";
 import { DetailImage } from '../../Components/RoomDetail';
@@ -25,7 +25,7 @@ const RoomDetails = () => {
             <div class="detail-container">
                 
                 <DetailImage
-                roomdetailimage={detailimage}
+                roomdetailimage={Dimage}
                 price="5000"
                 location="Dhobighat, Lalitpur"
                 nearBy="Road"

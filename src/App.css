@@ -24,7 +24,7 @@
 
 /*####################################################  css for landing page  ###############################################################*/
 header {
-  background: url(bg.png);
+  background: url(./images/bg.png);
   background-size: cover;
   height: 600px;
   width: 100%;
@@ -39,6 +39,7 @@ header {
   display: flex;
   align-items: center;
   z-index: 10;
+  border: 1px solid #D0CFCD;
 }
 
 .logo {
@@ -686,7 +687,7 @@ img:hover{
   /* border: 1px solid #0090BD; */
 }
 .sub-image-box{
-  background-image: url("./bg.png");
+  background-image: url("./images/bg.png");
   background-size: cover;
   margin: 10px;
   height: 150px;

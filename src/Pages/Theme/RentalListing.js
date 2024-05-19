@@ -1,12 +1,19 @@
 import RoomCard from '../../Components/RoomCard';
-import roomImage from '../../bg.png';
+import room1 from '../../images/image1.jpg';
+import room2 from '../../images/image2.jpg';
+import room3 from "../../images/image3.jpg"
 import Footer from './Footer';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import roomsData from '../../room.json';
 
 
 const RentalListing = () => {
-
+const images = {
+    RI1 : room1,
+    RI2 :  room2,
+    RI3 : room3
+}
 
     return (
        
@@ -20,42 +27,11 @@ const RentalListing = () => {
                 
                 <div class="containers">
 
-                    <RoomCard 
-                    roomImage ={roomImage}
-                    avaliabilityDate="30 May, 2023"
-                    location="Dhobighat, Lalitpur"
-                    description="Great and suitable room"
-                    price = "5000"
-                    />
-                    <RoomCard 
-                    roomImage ={roomImage}
-                    avaliabilityDate="1 May, 2023"
-                    location="Kumaripati, Lalitpur"
-                    description="Great and suitable room"
-                    price = "4000"
-                    />
-                    <RoomCard 
-                    roomImage ={roomImage}
-                    avaliabilityDate="1 May, 2023"
-                    location="Manbhawan, Lalitpur"
-                    description="Great and suitable room"
-                    price = "3500"
-                    />
-                    <RoomCard 
-                    roomImage ={roomImage}
-                    avaliabilityDate="1 May, 2023"
-                    location="Nakkhu, Lalitpur"
-                    description="Great and suitable room"
-                    price = "6000"
-                    />
-                    <RoomCard 
-                    roomImage ={roomImage}
-                    avaliabilityDate="1 May, 2023"
-                    location="Nakkhu, Lalitpur"
-                    description="Great and suitable room"
-                    price = "6000"
-                    />
-
+                    
+                    {roomsData.map(room => 
+                        <RoomCard {...room} roomImage={images[room.roomImage]}/>
+                    )}
+                    
                 </div>
                 <div class="doubt">
                     <h2>Have any doubts or looking for something specific?</h2>

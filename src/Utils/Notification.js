@@ -24,3 +24,15 @@ export const showDangerMessage = (message) => {
     theme: "colored",
     });
 }
+export const showInformationMessage = (message) =>{
+  toast.info(message, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+});
+}

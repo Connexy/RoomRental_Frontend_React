@@ -1,22 +1,17 @@
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import {showSuccessMessage, showInformationMessage} from '../../Utils/Notification';
 
 const Navbar = () => {
     const navigate = useNavigate();
     const doLogout = () => {
-        toast.success('Logout success', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-        localStorage.removeItem('isLogin');
-        navigate('/logout-page');
+        if (!localStorage.getItem('isLogin')) {
+            showInformationMessage("You have already logged out")
+        } else {
+            showSuccessMessage("Logout successfully");
+            localStorage.removeItem('isLogin');
+            navigate('/logout-page');
+        }
     }
 
     return (
@@ -44,7 +39,7 @@ const Navbar = () => {
                     <div class="dropdown">
                         <i class="fa-solid fa-user"></i>
                         <div class="dropdown-content">
-                            <Link to='/login-page' >Login</Link>
+                            {/* <Link to='/login-page' >Login</Link> */}
                             <Link to='/user-detail-page' >UserDetail</Link>
                         </div>
                     </div>
