@@ -1,35 +1,52 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Dimage from '../../images/bg.png';
 import { showSuccessMessage } from "../../Utils/Notification";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import { DetailImage } from '../../Components/RoomDetail';
+import roomsData from '../../room.json';
+import { useEffect } from "react";
+import room1 from '../../images/image1.jpg';
+import room2 from '../../images/image2.jpg';
+import room3 from "../../images/image3.jpg";
 
 
 
 const RoomDetails = () => {
-
-    const navigate = useNavigate();
-
-    const formSubmit = () => {
+    const images = {
+        RI1: room1,
+        RI2: room2,
+        RI3: room3
+    }
+const {index} = useParams();
+const room = roomsData[index];
+if(!room){
+     <div>Room not found</div>;
+}
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+const navigate = useNavigate();
+const formSubmit = () => {
         showSuccessMessage("Booking Form Submitted Successfully");
         navigate('/landing-page');
-
     }
+
     return (
         <div>
             <Navbar />
             <div class="room-detail-headings">
                 <h1>Room Details</h1>
             </div>
+
             <div class="detail-container">
                 
                 <DetailImage
-                roomdetailimage={Dimage}
-                price="5000"
-                location="Dhobighat, Lalitpur"
+                roomdetailimage={images[room.roomImage]}
+                price={room.price}
+                location={room.location}
                 nearBy="Road"
                  />
+                
 
             </div>
 

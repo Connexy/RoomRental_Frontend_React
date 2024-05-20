@@ -29,7 +29,7 @@ function App() {
         <Route path='/user-detail-page' element={<PrivateRoute component={UserDetail}/> }/>
         <Route path='/about-us-page' element={<PrivateRoute component={AboutUs}/> }/>
         <Route path='/contact-page' element={<PrivateRoute component={Contact}/> }/>
-        <Route path='/room-details-page' element={<RoomDetails/>}/>
+        <Route path='/room-details-page/:index' element={<RoomDetails/>}/>
 
       </Routes>
     

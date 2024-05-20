@@ -687,7 +687,7 @@ img:hover{
   /* border: 1px solid #0090BD; */
 }
 .sub-image-box{
-  background-image: url("./images/bg.png");
+  
   background-size: cover;
   margin: 10px;
   height: 150px;
