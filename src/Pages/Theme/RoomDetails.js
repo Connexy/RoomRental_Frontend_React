@@ -94,6 +94,7 @@ const formSubmit = () => {
                     <div class="location-header"><h2>Where it is located</h2></div>
                     <div id="map">
                         <iframe
+                            title="A unique title"
                             class="map-frame"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.645074638183!2d85.32024431453747!3d27.68230098279939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a1c8b22d4d%3A0x228b22a745a72a9f!2sDhobighat%2C%20Lalitpur%2044600!5e0!3m2!1sen!2snp!4v1641253411111!5m2!1sen!2snp"
                             style={{ width: "600px", height: "525px", border: "0" }}

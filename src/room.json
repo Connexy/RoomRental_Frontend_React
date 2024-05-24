@@ -41,6 +41,20 @@
         "location": "Dhobighat, Lalitpur",
         "description": "Great and suitable room",
         "price": "5000"
+      },
+       {
+        "roomImage": "RI1",
+        "avaliabilityDate": "30 May, 2023",
+        "location": "Afaldol, Lalitpur",
+        "description": "Great and suitable room",
+        "price": "3500"
+      },
+      {
+        "roomImage": "RI3",
+        "avaliabilityDate": "30 May, 2023",
+        "location": "Dhobighat, Lalitpur",
+        "description": "Great and suitable room",
+        "price": "5000"
       }
     ]
      

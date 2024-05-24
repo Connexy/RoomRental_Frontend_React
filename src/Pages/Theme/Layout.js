@@ -6,7 +6,10 @@ import LandingPage from "./LandingPage";
 const Layout = () => {
     return (
         <div>
-            <Navbar />
+            <div className="all-nav">
+            <Navbar />  
+            </div>
+            
 
             <div className="layout-main-body">
                 <Outlet />

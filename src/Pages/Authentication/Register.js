@@ -81,6 +81,7 @@ const handleInputChange = (event) => {
                                     placeholder="Enter your Username"
                                     handleInputChange={handleInputChange}
                                     errorMessage={errorMessage.username}
+                                    required
                                 />
                                 
                             </div>
@@ -92,6 +93,7 @@ const handleInputChange = (event) => {
                                     placeholder="Enter your Email"
                                     handleInputChange={handleInputChange}
                                     errorMessage={errorMessage.email}
+                                    required
                                 />
                             </div>
                             <div class="input-box">
@@ -102,6 +104,7 @@ const handleInputChange = (event) => {
                                 placeholder="Enter Your Password"
                                 handleInputChange={handleInputChange}
                                 errorMessage={errorMessage.password}
+                                required
                                 />
                             </div>
                             <button class="btn" id="register-btn"
