@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.layout-main-body{
+.layout-main-body {
   min-height: 100vh;
 }
 .alert-message {
@@ -14,7 +14,6 @@
   background: rgb(235, 139, 139);
   border: 1px solid rgb(255, 42, 42);
   border-radius: 10px;
-
 }
 
 .alert-message p {
@@ -34,12 +33,12 @@ header {
   position: fixed;
   height: 70px;
   width: 100%;
-  background-color: #E5E3E4;
+  background-color: #e5e3e4;
   color: black;
   display: flex;
   align-items: center;
   z-index: 10;
-  border: 1px solid #D0CFCD;
+  border: 1px solid #d0cfcd;
 }
 
 .logo {
@@ -49,20 +48,16 @@ header {
 
 .home-content {
   margin-left: 160px;
-
-
 }
 
 .home-content ul {
   display: flex;
   gap: 60px;
-
 }
 
 .home-content ul li {
   list-style: none;
   cursor: pointer;
-  
 }
 
 .home-content ul li a {
@@ -87,7 +82,6 @@ header {
   align-items: center;
   gap: 50px;
   justify-content: center;
-
 }
 
 .auth i {
@@ -143,7 +137,6 @@ header {
 .cont {
   display: flex;
   justify-content: end;
-
 }
 
 .element {
@@ -180,7 +173,6 @@ header {
 .searchbox input {
   border: none;
   border-bottom: 2px solid rgb(122, 122, 122);
-
 }
 
 .searchbox input:focus {
@@ -218,7 +210,6 @@ header {
   height: auto;
   width: 300px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  ;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -241,7 +232,6 @@ header {
   margin-top: 10px;
   height: auto;
   width: 100%;
-
 }
 
 .safety-section h1 {
@@ -308,7 +298,6 @@ header {
 
 .social-icons {
   font-size: 18px;
-
 }
 
 .social-icons i {
@@ -340,46 +329,56 @@ header {
   font-weight: bold;
 }
 /* css for reviws section */
-.reviews-section {
-  height: auto;
-  
-}
-.reviews-section h1 {
-  font-size: 32px;
+.reviews-section h1,
+p {
   margin-left: 30px;
 }
-.reviews-section p{
-  font-size: 14px;
-  margin-left: 30px;
-  color: #7A7A7A;
-}
-.reviews-section p {
-  font-weight: normal;
-}
-.review-box{
-  margin-top: 20px;
+
+.review-box {
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .review-card {
-  height: 200px;
-  width: 250px;
-  background-color: #d3d3d3;
-  padding: 20px;
-  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  height: 250px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 30px;
 }
-.review-card p{
-  color: #7A7A7A;
-  font-size: 14px;
-}
-.review-name{
-  line-height: 8;
-}
+
 .stars {
-  color: yellow;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
 }
+.stars i {
+  color: gold;
+  margin: 0 2px;
+}
+.review-card p {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+.review-card .review-name {
+  font-weight: bold;
+}
+
+/* .review-card img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+} */
 
 /* color for error msg in register page */
 .label-danger {
@@ -389,7 +388,6 @@ header {
   bottom: -20px;
   /* Adjust as needed */
   left: 0;
-
 }
 
 /* ##########################################################  for rental listing page ####################################################*/
@@ -402,7 +400,7 @@ header {
 }
 
 .big-container h1 {
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .containers {
@@ -415,7 +413,6 @@ margin-left: 30px;
 .heading-text {
   margin-top: 100px;
 }
-
 
 .card {
   line-height: 1.7;
@@ -430,7 +427,7 @@ margin-left: 30px;
   height: 40px;
   width: 150px;
   background-color: white;
-  color: #007BFF;
+  color: #007bff;
   border: none;
   border-radius: 20px;
   border: 1px solid rgb(159, 159, 159);
@@ -438,16 +435,13 @@ margin-left: 30px;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  
 }
 
 .button:hover {
   /* Change background color on hover */
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   border: none;
-
-
 }
 
 .price-button {
@@ -456,26 +450,24 @@ margin-left: 30px;
 }
 
 #cont-btn {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   box-shadow: none;
   border: none;
 }
 
 #cont-btn:hover {
-
-  color: #007BFF;
+  color: #007bff;
   border: 1px solid white;
 }
 
 /* for the image section  */
-img {
+.room_Detail_image img {
   width: 100%;
   height: 200px;
   transition: transform 0.25s ease;
-  
 }
-img:hover{
+.room_Detail_image img:hover {
   transform: scale(1.1);
 }
 
@@ -503,7 +495,7 @@ img:hover{
   width: 100%;
   line-height: 3;
 }
-.doubt a{
+.doubt a {
   text-decoration: none;
   color: white;
 }
@@ -537,11 +529,10 @@ img:hover{
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: url('avatar.png') no-repeat center center;
+  background: url("./images/avatar.png") no-repeat center center;
   background-size: cover;
   margin-bottom: 15px;
 }
-
 
 .name {
   font-size: 20px;
@@ -564,7 +555,7 @@ img:hover{
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
-  background-color: #007BFF;
+  background-color: #007bff;
 }
 
 .user_details {
@@ -589,19 +580,18 @@ img:hover{
 }
 
 .user_details p {
-  color: #6C757D;
+  color: #6c757d;
   margin-left: 10px;
   padding: 10px;
-  border-bottom: 1px solid #6C757D;
-  ;
+  border-bottom: 1px solid #6c757d;
 }
 
 .user_details p strong {
-  color: #1A202C;
+  color: #1a202c;
 }
 
 /*################################################# css for contact form ###################################################################*/
-.contact-body{
+.contact-body {
   padding-top: 70px;
   display: flex;
   justify-content: center;
@@ -612,7 +602,7 @@ img:hover{
 .contact-form {
   margin-top: 30px;
   height: auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 50%;
   padding: 20px;
   color: #404040;
@@ -620,7 +610,9 @@ img:hover{
   border-radius: 5px;
 }
 
-.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -630,7 +622,7 @@ img:hover{
   box-sizing: border-box;
 }
 .contact-form button {
-  background-color: #404040;;
+  background-color: #404040;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -642,7 +634,7 @@ img:hover{
 
 /* ########################################## css for room details #######################################################################*/
 
-.room-detail-headings{
+.room-detail-headings {
   text-align: center;
   padding-top: 80px;
 }
@@ -654,7 +646,7 @@ img:hover{
   width: 100%;
   /* border: 1px solid black; */
 }
-.room_Detail_image{
+.room_Detail_image {
   display: flex;
   justify-content: space-evenly;
   height: 500px;
@@ -666,55 +658,51 @@ img:hover{
   height: 400px;
   width: 600px;
   overflow: hidden;
-  
 }
 
 .detail-content {
-  
   line-height: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 400px;
-  width: 600px;  
+  width: 600px;
 }
-.sub-image{
+.sub-image {
   display: flex;
   margin: 10px;
   height: 200px;
   width: 580px;
   /* border: 1px solid #0090BD; */
 }
-.sub-image-box{
-  
+.sub-image-box {
   background-size: cover;
   margin: 10px;
   height: 150px;
   width: 200px;
-  border: 1px solid #0090BD;
+  border: 1px solid #0090bd;
   border-radius: 5px;
   overflow: hidden;
   transition: transform 0.25s ease;
 }
-.sub-image-box:hover{
+.sub-image-box:hover {
   transform: scale(1.1);
 }
-.sub-box{
+.sub-box {
   margin: 10px;
   height: 200px;
   width: 300px;
   /* border: 1px solid #0090BD; */
 }
-.sub-box i{
+.sub-box i {
   font-size: 20px;
   margin-right: 10px;
 }
-.sub-box div{
+.sub-box div {
   padding: 10px;
   font-size: 14px;
   font-weight: bold;
 }
-
 
 .room-detail-contents {
   display: flex;
@@ -722,15 +710,15 @@ img:hover{
   align-items: center;
   height: 400px;
   width: 100%;
-  
+
   /* border: 1px solid black; */
 }
-.room-features-content{
+.room-features-content {
   height: 300px;
   width: 600px;
   /* border: 1px solid black; */
 }
-.room-description{
+.room-description {
   height: 300px;
   width: 600px;
   /* border: 1px solid black; */
@@ -746,7 +734,7 @@ img:hover{
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.features-grid div{
+.features-grid div {
   font-size: 14px;
 }
 
@@ -765,21 +753,19 @@ img:hover{
   font-size: 14px;
 }
 
-
-.location-checkout{
+.location-checkout {
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: auto;
-  
 }
-.room-location{
+.room-location {
   height: 650px;
   width: 600px;
   /* border: 1px solid black; */
 }
-.room-checkout{
+.room-checkout {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -792,14 +778,13 @@ img:hover{
   height: auto;
   width: 100%;
 }
-.location-header{
+.location-header {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-
-.checkout-box{
+.checkout-box {
   height: 100%;
   width: 450px;
   border-radius: 10px;
@@ -839,7 +824,7 @@ img:hover{
 }
 
 .contact-form-button {
-  background-color: #0090BD;
+  background-color: #0090bd;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -849,7 +834,7 @@ img:hover{
 }
 
 /* #################################################### css for about us ####################################################################*/
-.about-us-content{
+.about-us-content {
   padding-top: 80px;
   display: flex;
   height: auto;
@@ -857,7 +842,7 @@ img:hover{
   border-bottom: 80px;
   align-items: center;
 }
-.about-us-header{
+.about-us-header {
   align-items: center;
 }
 .about-us-description {

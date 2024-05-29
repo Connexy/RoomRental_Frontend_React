@@ -103,6 +103,19 @@ const LandingPage = () => {
                         text="It was great and I found... room found suitable as I want"
                         reviewerName="Shyam Bahadur"
                     />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Shyam Bahadur"
+                    />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Shyam Bahadur"
+                    />
+                    <Review
+                        text="It was great and I found... room found suitable as I want"
+                        reviewerName="Shyam Bahadur"
+                    />
+
 
 
                 </div>
