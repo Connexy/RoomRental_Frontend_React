@@ -13,7 +13,7 @@ const Review = ({ text, reviewerName }) => {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-            <p style={{ marginLeft: "0px" }}>{text}.</p>
+            <p style={{ marginLeft: "0px", color: "#7a7a7a" }}>{text}.</p>
             <span className="review-name">{reviewerName}</span>
         </div>
     );

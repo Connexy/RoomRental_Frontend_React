@@ -1,24 +1,24 @@
 
-import {useNavigate} from 'react-router-dom';
-const RoomCard = ({index,roomImage, avaliabilityDate, location, description, price }) =>{
-const navigate = useNavigate( );
-const goDetailPage = () =>{
-    navigate(`/room-details-page/${index}`);
-}
-     return(
+import { useNavigate } from 'react-router-dom';
+const RoomCard = ({ index, roomImage, avaliabilityDate, location, description, price }) => {
+    const navigate = useNavigate();
+    const goDetailPage = () => {
+        navigate(`/room-details-page/${index}`);
+    }
+    return (
         <div class="card">
-        <div class="image-container">
-          <img src={roomImage} alt="check internet connection" />
-            <div class="availability">Available from {avaliabilityDate}</div>
+            <div class="image-container">
+                <img src={roomImage} alt="check internet connection" />
+                <div class="availability">Available from {avaliabilityDate}</div>
+            </div>
+            <p style={{ color: "gray", fontSize: "14px" }}>private room</p>
+            <h3>{location}</h3>
+            <p style={{ fontSize: "16px" }}>{description}</p>
+            <div class="price-button">
+                <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
+                <button onClick={goDetailPage} class="button">View Details</button>
+            </div>
         </div>
-        <p style={{ color: "gray",fontSize: "14px" }}>private room</p>
-        <h3>{location}</h3>
-        <p style={{fontSize: "16px"}}>{description}</p>
-        <div class="price-button">
-            <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
-           <button onClick={goDetailPage} class="button">View Details</button>
-        </div>
-    </div>
 
     );
 }

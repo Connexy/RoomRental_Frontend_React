@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import {showSuccessMessage, showInformationMessage} from '../../Utils/Notification';
+import { showSuccessMessage, showInformationMessage } from '../../Utils/Notification';
+import { useState } from "react";
 
 const Navbar = () => {
+    const [isLoggedIn, setisLoggedIn] = useState(!!localStorage.getItem('isLogin'));
     const navigate = useNavigate();
     const doLogout = () => {
         if (!localStorage.getItem('isLogin')) {
@@ -10,6 +12,7 @@ const Navbar = () => {
         } else {
             showSuccessMessage("Logout successfully");
             localStorage.removeItem('isLogin');
+            setisLoggedIn(false);
             navigate('/logout-page');
         }
     }
@@ -27,7 +30,7 @@ const Navbar = () => {
                         <li><Link to='/about-us-page'>About Us</Link></li>
                         <li><Link to='/contact-page'>Contact</Link></li>
                         <div class="dropdown">
-                            <i style={{fontSize:"20px", cursor:"pointer"}} class="fa-solid fa-bell"></i>
+                            <i style={{ fontSize: "20px", cursor: "pointer" }} class="fa-solid fa-bell"></i>
                             <div class="dropdown-content">
                                 <a href="#">noti 1</a>
                                 <a href="#">noti 2</a>
@@ -36,14 +39,18 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div class="auth">
-                    <div class="dropdown">
-                        <i class="fa-solid fa-user"></i>
-                        <div class="dropdown-content">
-                            
-                            <Link to='/user-detail-page' >UserDetail</Link>
+                    {isLoggedIn && (
+                        <div class="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="dropdown-content">
+
+                                <Link to='/user-detail-page' >UserDetail</Link>
+                            </div>
                         </div>
-                    </div>
-                    <i onClick={doLogout} class="fa-solid fa-right-from-bracket"></i>
+                    )}
+                    {isLoggedIn && (
+                        <i onClick={doLogout} class="fa-solid fa-right-from-bracket"></i>
+                    )}
                 </div>
             </div>
         </div>

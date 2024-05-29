@@ -25,7 +25,7 @@ function App() {
           <Route path="/register-page" element={<Register />} />
           <Route
             path="/landing-page"
-            element={<PrivateRoute component={LandingPage} />}
+            element={<LandingPage />}
           />
           <Route
             path="/rental-listing-page"

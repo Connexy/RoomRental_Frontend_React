@@ -33,7 +33,7 @@ const LandingPage = () => {
 
             <div class="section">
                 <h1>Find the apartments that fits your lifestyle</h1>
-                <p style={{ marginLeft: "30px" }}>We have a solution for every needs</p>
+                <p style={{ marginLeft: "30px", color: "#7a7a7a" }}>We have a solution for every needs</p>
 
                 <div class="categories">
 
@@ -87,8 +87,8 @@ const LandingPage = () => {
             </div>
 
             <section class="reviews-section">
-                <h1>Guaranteed by our reviews</h1>
-                <p>Our customers are 100% satisfied and our reviews speak for us!</p>
+                <h1 style={{ marginLeft: "30px" }}>Guaranteed by our reviews</h1>
+                <p style={{ marginLeft: "30px", color: "#7A7A7A" }}>Our customers are 100% satisfied and our reviews speak for us!</p>
                 <div class="review-box">
 
                     <Review

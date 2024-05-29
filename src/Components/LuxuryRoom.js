@@ -1,14 +1,14 @@
-import React  from "react";
+import React from "react";
 
-const LuxuryRoom = ({image, title, description}) =>{
-    return(
+const LuxuryRoom = ({ image, title, description }) => {
+    return (
         <div class="category">
             <div class="image">
-                <img style={{height:"200px"}} src={image} alt="network error"></img>
+                <img style={{ height: "200px" }} src={image} alt="network error"></img>
             </div>
             <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
+            <p style={{ color: "#7a7a7a" }}>{description}</p>
+        </div>
     );
 }
 export default LuxuryRoom;
