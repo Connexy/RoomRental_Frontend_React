@@ -19,37 +19,37 @@ const Navbar = () => {
 
     return (
         <div>
-            <div class="navbar">
-                <div class="logo">
+            <div className="navbar">
+                <div className="logo">
                     <h1>RoomLess</h1>
                 </div>
-                <div class="home-content">
+                <div className="home-content">
                     <ul>
                         <li><Link to='/landing-page'>Home</Link></li>
                         <li><Link to='/rental-listing-page'>Rental Listing</Link></li>
                         <li><Link to='/about-us-page'>About Us</Link></li>
                         <li><Link to='/contact-page'>Contact</Link></li>
-                        <div class="dropdown">
-                            <i style={{ fontSize: "20px", cursor: "pointer" }} class="fa-solid fa-bell"></i>
-                            <div class="dropdown-content">
+                        <div className="dropdown">
+                            <i style={{ fontSize: "20px", cursor: "pointer" }} className="fa-solid fa-bell"></i>
+                            <div className="dropdown-content">
                                 <a href="#">noti 1</a>
                                 <a href="#">noti 2</a>
                             </div>
                         </div>
                     </ul>
                 </div>
-                <div class="auth">
+                <div className="auth">
                     {isLoggedIn && (
-                        <div class="dropdown">
-                            <i class="fa-solid fa-user"></i>
-                            <div class="dropdown-content">
+                        <div className="dropdown">
+                            <i className="fa-solid fa-user"></i>
+                            <div className="dropdown-content">
 
                                 <Link to='/user-detail-page' >UserDetail</Link>
                             </div>
                         </div>
                     )}
                     {isLoggedIn && (
-                        <i onClick={doLogout} class="fa-solid fa-right-from-bracket"></i>
+                        <i onClick={doLogout} className="fa-solid fa-right-from-bracket"></i>
                     )}
                 </div>
             </div>

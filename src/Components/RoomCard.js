@@ -6,17 +6,17 @@ const RoomCard = ({ index, roomImage, avaliabilityDate, location, description, p
         navigate(`/room-details-page/${index}`);
     }
     return (
-        <div class="card">
-            <div class="image-container">
+        <div className="card">
+            <div className="image-container">
                 <img src={roomImage} alt="check internet connection" />
-                <div class="availability">Available from {avaliabilityDate}</div>
+                <div className="availability">Available from {avaliabilityDate}</div>
             </div>
             <p style={{ color: "gray", fontSize: "14px" }}>private room</p>
             <h3>{location}</h3>
             <p style={{ fontSize: "16px" }}>{description}</p>
-            <div class="price-button">
+            <div className="price-button">
                 <p style={{ color: "green", fontSize: "18px" }}><b>{price}/Month</b></p>
-                <button onClick={goDetailPage} class="button">View Details</button>
+                <button onClick={goDetailPage} className="button">View Details</button>
             </div>
         </div>
 

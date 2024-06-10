@@ -17,12 +17,12 @@ const RentalListing = () => {
   return (
     <div>
       <Navbar />
-      <div class="big-container">
-        <div className="heading-text">
+      <div className="big-container">
+        <div classNameName="heading-text">
           <h1>Are you looking for rooms ?</h1>
         </div>
 
-        <div class="containers">
+        <div className="containers">
           {roomsData.map((room, index) => (
             <RoomCard
               {...room}
@@ -31,10 +31,10 @@ const RentalListing = () => {
             />
           ))}
         </div>
-        <div class="doubt">
+        <div className="doubt">
           <h2>Have any doubts or looking for something specific?</h2>
           <p style={{ fontSize: "16px" }}>Our agents are here to help you.</p>
-          <button class="button" id="cont-btn">
+          <button className="button" id="cont-btn">
             <Link to="/contact-page">Contact Us</Link>
           </button>
         </div>

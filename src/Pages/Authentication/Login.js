@@ -28,7 +28,7 @@ const Login = () => {
     const doLogin = (e) => {
         e.preventDefault();
         let isLogin = false;
-        if (email == "admin" && password == "admin") {
+        if (email === "admin" && password === "admin") {
             isLogin = true;
             console.log("login successful");
 
