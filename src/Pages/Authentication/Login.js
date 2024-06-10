@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import TextInput from "../../Components/TextInput";
+import TextInput from "../../Components/TextInput.jsx";
 import PasswordInput from '../../Components/PasswordInput';
 import { useEffect, useState } from 'react';
 import Message from '../../Components/Message';
@@ -50,7 +50,7 @@ const Login = () => {
             // navigate
             navigate('/landing-page');
         }
-    }, []);
+    }, [navigate]);
 
     return (
         <div className="body">

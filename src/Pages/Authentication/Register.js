@@ -1,98 +1,63 @@
 import { Link } from "react-router-dom";
-import TextInput from "../../Components/TextInput";
-import PasswordInput from "../../Components/PasswordInput";
 import { useState } from "react";
-import { showSuccessMessage } from "../../Utils/Notification";
+import TextInput from "../../Components/TextInput.jsx";
+import PasswordInput from "../../Components/PasswordInput";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { showSuccessMessage } from '../../Utils/Notification.js'
+
 
 const Register = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
 
-    const validateForm = (event) => {
-        const err = { ...errorMessage };
-        let isValid = true;
-        if (username === '') {
-            err.username = "Username is required";
-            isValid = false;
-        } else {
-            err.username = '';
-        }
-        if (email === '') {
-            err.email = "Email is required";
-            isValid = false;
-        } else {
-            err.email = '';
-        }
-        if (password === '') {
-            err.password = "Password is required";
-            isValid = false;
-        } else {
-            err.password = '';
-        }
-        setErrorMessage(err);
-        return isValid;
-    }
-
-    const doRegister = () => {
-        if (validateForm()) {
-            showSuccessMessage("User Registerd Successfully");
+    const handleRegister = async (event) => {
+        event.preventDefault();
+        const formData = {
+            username, email, password
+        };
+        try {
+            const response = await axios.post('http://localhost:5000/api/register', formData);
+            console.log(response.data.message);
+            showSuccessMessage("user successfully registered");
             navigate('/login-page');
+        } catch (error) {
+            console.error("Registration error", error);
 
         }
     }
 
-
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setErrorMessage(prevState => ({ ...prevState, [name]: '' })); // clear the error message for this field
-        switch (name) {
-            case 'username':
-                setUsername(value);
-                break;
-            case 'email':
-                setEmail(value);
-                break;
-            case 'password':
-                setPassword(value);
-                break;
-            default:
-                break;
-        }
-    }
 
     return (
         <div className="body">
-
-
             <div className="main-container">
                 <div className="container">
                     <div className="Form Register-form">
                         <h2>Register</h2>
-                        <form action="#">
+                        <form>
                             <div className="input-box">
                                 <i className='bx bxs-user'></i>
                                 <TextInput
                                     title="Username"
                                     name="username"
+                                    value={username}
                                     placeholder="Enter your Username"
-                                    onChange={handleInputChange}
-                                    errorMessage={errorMessage.username}
+                                    onChange={(event) => setUsername(event.target.value)}
+
                                     required
                                 />
-
                             </div>
                             <div className="input-box">
                                 <i className='bx bxs-envelope'></i>
                                 <TextInput
                                     title="Email"
                                     name="email"
+                                    value={email}
                                     placeholder="Enter your Email"
-                                    onChange={handleInputChange}
-                                    errorMessage={errorMessage.email}
+                                    onChange={(event) => setEmail(event.target.value)}
+
                                     required
                                 />
                             </div>
@@ -101,27 +66,26 @@ const Register = () => {
                                 <PasswordInput
                                     title="Password"
                                     name="password"
+                                    value={password}
                                     placeholder="Enter Your Password"
-                                    onChange={handleInputChange}
-                                    errorMessage={errorMessage.password}
+                                    onChange={(event) => setPassword(event.target.value)}
+
                                     required
                                 />
                             </div>
-                            <button className="btn" id="register-btn"
-                                onClick={doRegister}
-                            >Register</button>
+                            <button className="btn" id="register-btn" onClick={handleRegister}>Register</button>
                         </form>
                         <p>Or Sign up using</p>
                         <div className="social-media">
                             <i className='bx bxl-facebook'></i>
                             <i className='bx bxl-google'></i>
                         </div>
-                        <p className="LoginBtn"><Link to="/login-page" >Go back to login</Link></p>
+                        <p className="LoginBtn"><Link to="/login-page">Go back to login</Link></p>
                     </div>
                 </div>
             </div>
         </div>
-
     );
 }
+
 export default Register;

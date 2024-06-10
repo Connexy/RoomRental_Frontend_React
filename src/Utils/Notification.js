@@ -9,7 +9,7 @@ export const showSuccessMessage = (message) => {
     pauseOnHover: true,
     draggable: true,
     theme: "colored",
-    });
+  });
 }
 
 export const showDangerMessage = (message) => {
@@ -22,9 +22,9 @@ export const showDangerMessage = (message) => {
     draggable: true,
     progress: undefined,
     theme: "colored",
-    });
+  });
 }
-export const showInformationMessage = (message) =>{
+export const showInformationMessage = (message) => {
   toast.info(message, {
     position: "top-right",
     autoClose: 2000,
@@ -34,5 +34,5 @@ export const showInformationMessage = (message) =>{
     draggable: true,
     progress: undefined,
     theme: "colored",
-});
+  });
 }
