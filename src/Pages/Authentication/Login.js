@@ -9,6 +9,7 @@ import { showSuccessMessage } from '../../Utils/Notification';
 
 
 
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -27,23 +28,21 @@ const Login = () => {
 
     const doLogin = (e) => {
         e.preventDefault();
-        let isLogin = false;
-        if (email === "admin" && password === "admin") {
-            isLogin = true;
-            console.log("login successful");
+        var isLogin = false;
+        if (email === 'admin' && password === 'admin') {
 
+
+            if (isLogin) {
+                localStorage.setItem('isLogin', 1);
+                //navigate 
+                navigate('/landing-page');
+                showSuccessMessage("Login Successful");
+            } else {
+                setErrorMessage("Invalid email or password ?");
+            }
         }
 
-        if (isLogin) {
-            localStorage.setItem('isLogin', 1);
-            //navigate 
-            navigate('/landing-page');
-            showSuccessMessage("Login Successful");
-        } else {
-            setErrorMessage("Invalid email or password ?");
-        }
     }
-
     useEffect(() => {
         const isLogin = localStorage.getItem('isLogin');
         if (isLogin === '1') {
@@ -51,6 +50,7 @@ const Login = () => {
             navigate('/landing-page');
         }
     }, [navigate]);
+
 
     return (
         <div className="body">

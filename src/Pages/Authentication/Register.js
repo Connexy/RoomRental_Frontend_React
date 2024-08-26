@@ -13,6 +13,19 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleInputChange = (event) => {
+        if (event.target.name === 'username') {
+            setUsername(event.target.value);
+        }
+        if (event.target.name === 'email') {
+            setEmail(event.target.value);
+        }
+        if (event.target.name === 'password') {
+            setPassword(event.target.value);
+        }
+
+    }
+
     const handleRegister = async (event) => {
         event.preventDefault();
         const formData = {
@@ -44,7 +57,7 @@ const Register = () => {
                                     name="username"
                                     value={username}
                                     placeholder="Enter your Username"
-                                    onChange={(event) => setUsername(event.target.value)}
+                                    onChange={handleInputChange}
 
                                     required
                                 />
@@ -56,7 +69,7 @@ const Register = () => {
                                     name="email"
                                     value={email}
                                     placeholder="Enter your Email"
-                                    onChange={(event) => setEmail(event.target.value)}
+                                    onChange={handleInputChange}
 
                                     required
                                 />
@@ -68,7 +81,7 @@ const Register = () => {
                                     name="password"
                                     value={password}
                                     placeholder="Enter Your Password"
-                                    onChange={(event) => setPassword(event.target.value)}
+                                    onChange={handleInputChange}
 
                                     required
                                 />
